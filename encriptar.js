@@ -3,7 +3,7 @@ var btnEncrip = document.querySelector("#btnEncriptar");
 var btnDecript = document.querySelector("#btnDesencriptar");
 var btnCopiar = document.querySelector("#btnCopiar");
 var msjn = document.querySelector("#txtEncriptado");
-
+btnCopiar.style.display="none";
 
 function textoEncriptar (texto) {
 	if (texto == 'a') {
@@ -60,6 +60,7 @@ btnEncrip.addEventListener('click',function (event) {
 	var texto = mensaje.value;
 	var msgFinal = encriptar(texto);
 	msjn.value = msgFinal;
+	btnCopiar.style.display="block";
 });
 
 
@@ -78,6 +79,7 @@ btnCopiar.addEventListener('click', function (event) {
 	navigator.clipboard.writeText(msjn.value); 
 	alert("Texto Copiado")
 	msjn.value="";
+	mensaje.value="";
 	}
 )
 
