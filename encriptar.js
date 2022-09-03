@@ -61,6 +61,7 @@ btnEncrip.addEventListener('click',function (event) {
 	var msgFinal = encriptar(texto);
 	msjn.value = msgFinal;
 	btnCopiar.style.display="block";
+	txtMuneco.style.display="none";
 });
 
 
